@@ -8,4 +8,8 @@ TODO
 Makefile.PL
 examples/number.pl
 lib/Math/BigInt/Named.pm
-t/bigintn.t			# test name interface
+lib/Math/BigInt/Named/German.pm
+lib/Math/BigInt/Named/English.pm
+t/named.t			# test generic name interface
+t/german.t			# test name interface in German
+t/english.t			# test name interface in English
