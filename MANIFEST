@@ -1,0 +1,11 @@
+CHANGES
+README
+LICENSE
+MANIFEST
+NEW
+CREDITS
+TODO
+Makefile.PL
+examples/number.pl
+lib/Math/BigInt/Named.pm
+t/bigintn.t			# test name interface
