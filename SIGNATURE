@@ -1,0 +1,55 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.54.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 38dd40d4fe9a8a408648f2f2c1a2a3ac76bbac72 Build.PL
+SHA1 58ea9b20fdaa6a52f6b4dba55a727f23d852dbd2 CHANGES
+SHA1 f0ac186947cb619a6b6e826893f9e763a234e489 CREDITS
+SHA1 d6a6c30ee6d9ba6b9afab8bbf6a25e1b23c744e0 LICENSE
+SHA1 69a5bc5832dd2977834df1dfa70b06bc0d6306ab MANIFEST
+SHA1 b5e8389efb6f416845fa0cfc61c0edce2e2d87b0 MANIFEST.SKIP
+SHA1 ffac794ca03e69d3fdccebec26837f7431e95ac6 META.yml
+SHA1 18b839f1c0d99e2ece3df7cf5cb91c23413a5d71 Makefile.PL
+SHA1 b5cfe6c81c5379aa164bfe39a764cec3dcb3fecf README
+SHA1 e1af01a66c55b9f0c0524db438983fcfa077b6bb TODO
+SHA1 065513886e88624dafe413ede638af9f2ecc7b17 examples/number.pl
+SHA1 9b2f9d83bcf77860f53a0c07c90a4a59ad9f5df1 inc/Module/Install.pm
+SHA1 abe32855d75ab13747cf65765af9947b7a8c3057 inc/Module/Install/Base.pm
+SHA1 da9dfbb8ae4a8a8bac0ab9cd7ef7dc89e4cb5dbe inc/Module/Install/Build.pm
+SHA1 95b81d1e91bd634467bf633571eff4420e9c04eb inc/Module/Install/Can.pm
+SHA1 1fe98c63cf9d7271c8cb4183ba230f152df69e26 inc/Module/Install/Fetch.pm
+SHA1 2249171a2b72cd73ff2c0a06597d29f86e5df456 inc/Module/Install/Makefile.pm
+SHA1 381bb98ea3877bba49ae85e7a7ea130645fd3dbf inc/Module/Install/Metadata.pm
+SHA1 0c2118868ef82ac517eb6d9c3bd93e6eb9bbf83e inc/Module/Install/Win32.pm
+SHA1 e827d6d43771032fa3df35c0ad5e5698d0e54cda inc/Module/Install/WriteAll.pm
+SHA1 35e3848979fc95ea427ebabbee4df2c44d36c362 lib/Math/BigInt/Named.pm
+SHA1 cef86264b43c7f0cdccc8221f0ed567ae07d784e lib/Math/BigInt/Named/English.pm
+SHA1 d3d45c20f32d67714998e2a659f9232dc5efd8b7 lib/Math/BigInt/Named/German.pm
+SHA1 fd105d22692cd68536eaccd847cd87751fb68806 t/english.t
+SHA1 37a4d908311ccb1cce7cc3935103c7fe3f418e18 t/german.t
+SHA1 824346bf06c4c298f43ddbfbe90f3d0df7a46b5b t/named.t
+SHA1 21a320a84a70e9f2fd19343f6d49e51b414e3995 t/pod.t
+SHA1 5f3625640eed3a2a9e0be224c15e782e9d2b3ec5 t/pod_cov.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iQEVAwUBReAq3ncLPEOTuEwVAQIBbgf+NIiez5DXbumPXcDd7igbwdpgljUOlJuy
+mvXjsJSAH6s1Dt/bchqeVwRiHwDs68KIOlrK1/eb6A3z2KPy8DY120/kpEzlNJGF
+ofB39+JITwe3/pxYbPYY+Dv9/K9xL6dLGfeblH7K0IHeYDUWtIJ9OaVM0pk3hYIF
+YEVy7eiyRPwVBsMys/BCR/RqqpOfzrlpXWqDQ+uaz503EkmddhMROGBTm8tJ40eK
+pb4xqSqZvGnAE0YBZXSdz8ILibhmBGVj2g9lhVOOPYSpfwDjlscnQ+8iPjwqHac0
+kuCsYBJ4MtHXPOJ9aVBdZmZxAM0zvgNB7afnDNK8+fGSH+cf9Sc1ug==
+=qxcv
+-----END PGP SIGNATURE-----

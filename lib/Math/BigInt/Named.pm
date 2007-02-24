@@ -2,17 +2,16 @@
 
 package Math::BigInt::Named;
 
-require 5.005_02;
+require 5.006001;
 use strict;
 
-use Exporter;
 use Math::BigInt::Named;
-use vars qw($VERSION @ISA $PACKAGE @EXPORT_OK
+use vars qw($VERSION @ISA
             $accuracy $precision $round_mode $div_scale);
 
-@ISA = qw(Exporter Math::BigInt);
+@ISA = qw(Math::BigInt);
 
-$VERSION = 0.02;
+$VERSION = '0.03';
 
 # Globals
 $accuracy = $precision = undef;
@@ -27,7 +26,8 @@ my $LANGUAGE = {
   de => 'german',
   sp => 'spanish',
   fr => 'french',
-  ro => 'Romana',
+  ro => 'romana',
+  it => 'italian',
   };
 
 my $LOADED = { };
@@ -36,6 +36,9 @@ sub name
   {
   # output the name of the number
   my ($x) = shift;
+
+  # make Math::BigInt::Name->name(123) work
+  $x = $x->new( shift ) unless ref ($x);
 
   return 'NaN' if $x->is_nan();
 
@@ -58,7 +61,7 @@ sub name
     eval "use $lang;"; $LOADED->{$lang} = 1;
     }
   my $y = $lang->new($x);
-  return $y->name();
+  $y->name();
   }
 
 sub from_name
@@ -68,14 +71,6 @@ sub from_name
 
   my $x = Math::BigInt->bnan();
   }
-
-#sub import
-#  {
-#  my $self = shift;
-#  Math::BigInt->import(@_);
-#  $self->SUPER::import(@_);                     # need it for subclasses
-#  #$self->export_to_level(1,$self,@_);           # need this ?
-#  }
 
 1;
 
@@ -102,25 +97,23 @@ Math::BigInt::Named - Math::BigInts that know their name in some languages
 
 This is a subclass of Math::BigInt and adds support for named numbers. 
 
-=head2 MATH LIBRARY
+=head1 METHODS
 
-Math with the numbers is done (by default) by a module called
-Math::BigInt::Calc. This is equivalent to saying:
+=head2 name()
 
-	use Math::BigInt::Named lib => 'Calc';
+	print Math::BigInt::Name->name( 123 );
 
-You can change this by using:
+Convert a BigInt to a name.
 
-	use Math::BigInt::Named lib => 'BitVect';
+=head2 from_name()
+  
+	my $bigint = Math::BigInt::Name->from_name('hundertzwanzig');
 
-The following would first try to find Math::BigInt::Foo, then
-Math::BigInt::Bar, and when this also fails, revert to Math::BigInt::Calc:
-
-	use Math::BigInt::Named lib => 'Foo,Math::BigInt::Bar';
+Create a Math::BigInt::Name from a name string. B<Not yet implemented!>
 
 =head1 BUGS
 
-None know yet. Please see also L<Math::BigInt>.
+Not fully implemented yet. Please see also L<Math::BigInt>.
 
 =head1 LICENSE
 
@@ -138,6 +131,8 @@ contain more documentation and examples as well as testcases.
 
 =head1 AUTHORS
 
-(C) by Tels in late 2001, early 2002. Based on work by Chris London Noll.
+(C) by Tels <http://bloodgate.com> in late 2001, early 2002, 2007.
+
+Based on work by Chris London Noll.
 
 =cut

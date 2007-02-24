@@ -1,0 +1,17 @@
+abstract: Math::BigInts that know their name in some languages
+author: Tels <nospam-abuse@bloodgate.com>
+build_requires: 
+  Test::More: 0.42
+distribution_type: module
+generated_by: Module::Install version 0.64
+license: perl
+name: Math-BigInt-Named
+no_index: 
+  directory: 
+    - examples
+    - inc
+    - t
+requires: 
+  Math::BigInt: 1.78
+  perl: 5.6.1
+version: 0.03

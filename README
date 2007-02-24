@@ -10,7 +10,7 @@ To test, unzip & untar package, then run
 	perl Makefile.PL
 	make
 	make test
-	make install
+	sudo make install
 
 See ./examples/number.pl for how to use this package on a webserver or on the
 command line.

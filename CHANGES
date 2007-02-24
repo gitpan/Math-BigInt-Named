@@ -1,14 +1,16 @@
 
-Complete version history
-========================
+Version history for Math::BigInt::Named:
 
-############################################################################## 
-Math::BigInt::Named:
+2007-02-24 v0.03 Tels 181 tests
+  * modernize package (META.yml, SIGNATURE, etc.)
+  * bundle and use Module::Install
+  * add POD tests
+
+2001-12-30 v0.02 Tels
+  * added German and English (own subclass), some tests and some real code.
 
 2001-11-20 v0.01 Tels
- * first release
-2001-12-30 v0.02 Tels
- * added German and English (own subclass), some tests and some real code.
+  * first release
 
 Please send me test-reports, your experiences with this and your ideas - I love
 to hear about my work!

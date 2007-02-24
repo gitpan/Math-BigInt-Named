@@ -2,22 +2,11 @@
 
 package Math::BigInt::Named::German;
 
-require 5.005_02;
+require 5.006001;
+use base 'Math::BigInt::Named';
+$VERSION = '0.02';
+
 use strict;
-
-use Exporter;
-use Math::BigInt;
-use vars qw($VERSION @ISA $PACKAGE @EXPORT_OK
-            $accuracy $precision $round_mode $div_scale);
-
-@ISA = qw(Exporter Math::BigInt);
-
-$VERSION = 0.01;
-
-# Globals
-$accuracy = $precision = undef;
-$round_mode = 'even';
-$div_scale = 40;
 
 sub name
   {
@@ -51,15 +40,7 @@ sub name
     $index++;
     }
   $ret =~ s/\s+$//;	# trailing spaces
-  return $ret;
-  }
-
-sub from_name
-  {
-  # create a Math::BigInt::Name from a name string
-  my $name = shift;
-
-  my $x = Math::BigInt->bnan();
+  $ret;
   }
 
 my $SMALL = [ qw/ 
@@ -134,7 +115,7 @@ sub _triple_name
     }
   $postfix .= $plural unless $number->is_one();
   $index -= 2;
-  return $TRIPLE->[$index >> 1] . $postfix;
+  $TRIPLE->[$index >> 1] . $postfix;
   }
 
 sub _triple
@@ -174,14 +155,6 @@ sub _triple
   $rc;
   }
 
-#sub import
-#  {
-#  my $self = shift;
-#  Math::BigInt->import(@_);
-#  $self->SUPER::import(@_);                     # need it for subclasses
-#  #$self->export_to_level(1,$self,@_);           # need this ?
-#  }
-
 1;
 
 __END__
@@ -208,6 +181,20 @@ with their name in German to Math::BigInt::Named.
 Usually you do not need to use this directly, but rather go via
 L<Math::BigInt::Named>.
 
+=head1 METHODS
+
+=head2 name()
+
+	print Math::BigInt::Name->name( 123 );
+
+Convert a BigInt to a name.
+
+=head2 from_name()
+  
+	my $bigint = Math::BigInt::Name->from_name('hundertzwanzig');
+
+Create a Math::BigInt::Name from a name string. B<Not yet implemented!>
+
 =head1 BUGS
 
 None know yet. Please see also L<Math::BigInt::Named>.
@@ -228,6 +215,6 @@ contain more documentation and examples as well as testcases.
 
 =head1 AUTHORS
 
-(C) by Tels in late 2001, early 2002.
+(C) by Tels http://bloodgate.com in late 2001, early 2002, 2007.
 
 =cut

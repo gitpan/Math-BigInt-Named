@@ -1,10 +1,7 @@
 #!/usr/bin/perl -w
 
-# not ready yet
-
-BEGIN { unshift @INC, '../lib'; }	# uncomment to use old, org version
-
-$| = 1;
+use lib '../lib';
+use lib 'lib';
 
 use Math::BigInt::Named;
 

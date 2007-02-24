@@ -1,15 +1,29 @@
+Build.PL
 CHANGES
-README
-LICENSE
-MANIFEST
-NEW
 CREDITS
-TODO
-Makefile.PL
 examples/number.pl
+inc/Module/Install.pm
+inc/Module/Install/Base.pm
+inc/Module/Install/Build.pm
+inc/Module/Install/Can.pm
+inc/Module/Install/Fetch.pm
+inc/Module/Install/Makefile.pm
+inc/Module/Install/Metadata.pm
+inc/Module/Install/Win32.pm
+inc/Module/Install/WriteAll.pm
 lib/Math/BigInt/Named.pm
-lib/Math/BigInt/Named/German.pm
 lib/Math/BigInt/Named/English.pm
-t/named.t			# test generic name interface
-t/german.t			# test name interface in German
+lib/Math/BigInt/Named/German.pm
+LICENSE
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+META.yml
+README
+SIGNATURE
 t/english.t			# test name interface in English
+t/german.t			# test name interface in German
+t/named.t			# test generic name interface
+t/pod.t
+t/pod_cov.t
+TODO
